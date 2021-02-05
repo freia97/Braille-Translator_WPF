@@ -1,0 +1,22 @@
+﻿<Window x:Class="Braille_Translator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Braille_Translator"
+        mc:Ignorable="d"
+        Title="Braille Translator" Height="250" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary Source="styles\style1.xaml"/>
+    </Window.Resources>
+    <Grid Background="#FF202020" >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="Button1" Content="конвертер" Grid.Row="0" Click="Button1_Click"/>
+        <Button x:Name="Button2" Content="краткая инструкция" Grid.Row="1" Click="Button2_Click"/>
+        <Button x:Name="Button3" Content="связь с разработчиком" Grid.Row="2" Click="Button3_Click"/>
+    </Grid>
+</Window>

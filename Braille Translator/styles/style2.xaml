@@ -1,0 +1,59 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Braille_Translator.styles">
+    <Style TargetType="TextBox">
+        <Setter Property="Background" Value="Black"/>
+        <Setter Property="AcceptsReturn" Value="True"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="BorderBrush" Value="Orange"/>
+    </Style>
+    <Style TargetType="Border">
+        <Setter Property="Background" Value="Orange"/>
+    </Style>
+    <Style TargetType="TabItem">
+        <Setter Property="Background" Value="Orange"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="FontFamily" Value="Microsoft YaHei"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="UltraBold"/>
+    </Style>
+    <Style TargetType="Window">
+        <Setter Property="BorderBrush" Value="Orange"/>
+    </Style>
+    <Style TargetType="Button">
+        <Setter Property="BorderBrush" Value="Orange"/>
+        <Setter Property="Width" Value="35"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Margin" Value="0,3,3,0"/>
+        <Setter Property="Background" Value="#FF202020"/>
+        <Setter Property="Foreground" Value="Orange"/>
+        <Setter Property="FontFamily" Value="Microsoft YaHei"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="UltraBold"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property = "Foreground" Value="Black"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontWeight" Value="ExtraBold"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="ScrollBar">
+        <Setter Property="Background" Value="#FF202020"/>
+        <Setter Property="BorderBrush" Value="Orange"/>
+        <Setter Property="Foreground" Value="Orange"/>
+    </Style>
+    <Style TargetType="Label">
+        <Setter Property="Foreground" Value="Orange"/>
+        <Setter Property="FontFamily" Value="Microsoft YaHei"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="UltraBold"/>
+    </Style>
+    <Style TargetType="Image">
+        <Setter Property="Stretch" Value="Fill"/>
+    </Style>
+    
+</ResourceDictionary>

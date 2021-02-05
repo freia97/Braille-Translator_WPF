@@ -1,0 +1,257 @@
+﻿<Window x:Class="Braille_Translator.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Braille_Translator"
+        mc:Ignorable="d"
+        Title="Braille Translator"  Height="750" Width="1150" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary Source="styles\style2.xaml"/>
+    </Window.Resources>
+    <Grid Background="#FF202020">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button x:Name="back" Content="назад" Width="100" Click="back_Click"/>
+            <Button x:Name="settings" Content="Настройки" Width="100" Click="settings_Click"/>
+        </StackPanel>
+        <TabControl Grid.Row="1" Background="#FF202020" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="графический режим">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="TextBox1" Grid.Column="0" ToolTip="введите текст" TextChanged="TextBox1_TextChanged"/>
+                    <TextBox x:Name="TextBox2" Grid.Column="1" ToolTip="результат"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="ввод с экрана">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="310"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="TextBox3" Grid.Column="1" IsReadOnly="True"/>
+                    <DockPanel Grid.Column="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <WrapPanel Orientation="Horizontal" Grid.Column="0">
+                                    <Button x:Name="ButtonA" Click="ButtonA_Click">
+                                        <Image  Source="pictures\eng\e1.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonB" Click="ButtonB_Click">
+                                        <Image  Source="pictures\eng\e2.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonC" Click="ButtonC_Click">
+                                        <Image  Source="pictures\eng\e3.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonD" Click="ButtonD_Click">
+                                        <Image  Source="pictures\eng\e4.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonE" Click="ButtonE_Click">
+                                        <Image  Source="pictures\eng\e5.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonF" Click="ButtonF_Click">
+                                        <Image  Source="pictures\eng\e6.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonG" Click="ButtonG_Click">
+                                        <Image  Source="pictures\eng\e7.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonH" Click="ButtonH_Click">
+                                        <Image  Source="pictures\eng\e8.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonI" Click="ButtonI_Click">
+                                        <Image  Source="pictures\eng\e9.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonJ" Click="ButtonJ_Click">
+                                        <Image  Source="pictures\eng\e10.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonK" Click="ButtonK_Click">
+                                        <Image  Source="pictures\eng\e11.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonL" Click="ButtonL_Click">
+                                        <Image  Source="pictures\eng\e12.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonM" Click="ButtonM_Click">
+                                        <Image  Source="pictures\eng\e13.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonN" Click="ButtonN_Click">
+                                        <Image  Source="pictures\eng\e14.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonO" Click="ButtonO_Click">
+                                        <Image  Source="pictures\eng\e15.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonP" Click="ButtonP_Click">
+                                        <Image  Source="pictures\eng\e16.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonQ" Click="ButtonQ_Click">
+                                        <Image  Source="pictures\eng\e17.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonR" Click="ButtonR_Click">
+                                        <Image  Source="pictures\eng\e18.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonS" Click="ButtonS_Click">
+                                        <Image  Source="pictures\eng\e19.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonT" Click="ButtonT_Click">
+                                        <Image  Source="pictures\eng\e20.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonU" Click="ButtonU_Click">
+                                        <Image  Source="pictures\eng\e21.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonV" Click="ButtonV_Click">
+                                        <Image  Source="pictures\eng\e22.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonW" Click="ButtonW_Click">
+                                        <Image  Source="pictures\eng\e23.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonX" Click="ButtonX_Click">
+                                        <Image  Source="pictures\eng\e24.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonY" Click="ButtonY_Click">
+                                        <Image  Source="pictures\eng\e25.jpg"/>
+                                    </Button>
+                                    <Button x:Name="ButtonZ" Click="ButtonZ_Click">
+                                        <Image  Source="pictures\eng\e26.jpg" Stretch="Fill"/>
+                                    </Button>
+                                    <Label Content="английский алфавит" Margin="-8"/>
+                                </WrapPanel>
+                                <WrapPanel Orientation="Vertical" Grid.Column="1">
+                                    <Button x:Name="del" Content="стереть" Width="140" Click="del_Click"/>
+                                    <Button x:Name="delall" Content="стереть всё" Width="140" Click="delall_Click"/>
+                                    <Button x:Name="spacebtn" Content="пробел" Width="140" Click="spacebtn_Click"/>
+                                </WrapPanel>
+                            </Grid>
+                            <WrapPanel Orientation="Horizontal" Grid.Row="1">
+                                <Button x:Name="Buttonr1" Click="Buttonr1_Click">
+                                    <Image  Source="pictures\rus\r1.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr2" Click="Buttonr2_Click">
+                                    <Image  Source="pictures\rus\r2.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr3" Click="Buttonr3_Click">
+                                    <Image  Source="pictures\rus\r3.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr4" Click="Buttonr4_Click">
+                                    <Image  Source="pictures\rus\r4.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr5" Click="Buttonr5_Click">
+                                    <Image  Source="pictures\rus\r5.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr6" Click="Buttonr6_Click">
+                                    <Image  Source="pictures\rus\r6.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr7" Click="Buttonr7_Click">
+                                    <Image  Source="pictures\rus\r7.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr8" Click="Buttonr8_Click">
+                                    <Image  Source="pictures\rus\r8.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr9" Click="Buttonr9_Click">
+                                    <Image  Source="pictures\rus\r9.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr10" Click="Buttonr10_Click">
+                                    <Image  Source="pictures\rus\r10.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr11" Click="Buttonr11_Click">
+                                    <Image  Source="pictures\rus\r11.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr12" Click="Buttonr12_Click">
+                                    <Image  Source="pictures\rus\r12.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr13" Click="Buttonr13_Click">
+                                    <Image  Source="pictures\rus\r13.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr14" Click="Buttonr14_Click">
+                                    <Image  Source="pictures\rus\r14.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr15" Click="Buttonr15_Click">
+                                    <Image  Source="pictures\rus\r15.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr16" Click="Buttonr16_Click">
+                                    <Image  Source="pictures\rus\r16.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr17" Click="Buttonr17_Click">
+                                    <Image  Source="pictures\rus\r17.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr18" Click="Buttonr18_Click">
+                                    <Image  Source="pictures\rus\r18.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr19" Click="Buttonr19_Click">
+                                    <Image  Source="pictures\rus\r19.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr20" Click="Buttonr20_Click">
+                                    <Image  Source="pictures\rus\r20.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr21" Click="Buttonr21_Click">
+                                    <Image  Source="pictures\rus\r21.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr22" Click="Buttonr22_Click">
+                                    <Image  Source="pictures\rus\r22.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr23" Click="Buttonr23_Click">
+                                    <Image  Source="pictures\rus\r23.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr24" Click="Buttonr24_Click">
+                                    <Image  Source="pictures\rus\r24.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr25" Click="Buttonr25_Click">
+                                    <Image  Source="pictures\rus\r25.jpg"/>
+                                </Button>
+                                <Button x:Name="Buttonr26" Click="Buttonr26_Click">
+                                    <Image  Source="pictures\rus\r26.jpg" Stretch="Fill"/>
+                                </Button>
+                                <Button x:Name="Buttonr27" Click="Buttonr27_Click">
+                                    <Image  Source="pictures\rus\r27.jpg" Stretch="Fill"/>
+                                </Button>
+                                <Button x:Name="Buttonr28" Click="Buttonr28_Click">
+                                    <Image  Source="pictures\rus\r28.jpg" Stretch="Fill"/>
+                                </Button>
+                                <Button x:Name="Buttonr29" Click="Buttonr29_Click">
+                                    <Image  Source="pictures\rus\r29.jpg" Stretch="Fill"/>
+                                </Button>
+                                <Button x:Name="Buttonr30" Click="Buttonr30_Click">
+                                    <Image  Source="pictures\rus\r30.jpg" Stretch="Fill"/>
+                                </Button>
+                                <Button x:Name="Buttonr31" Click="Buttonr31_Click">
+                                    <Image  Source="pictures\rus\r31.jpg" Stretch="Fill"/>
+                                </Button>
+                                <Button x:Name="Buttonr32" Click="Buttonr32_Click">
+                                    <Image  Source="pictures\rus\r32.jpg" Stretch="Fill"/>
+                                </Button>
+                                <Button x:Name="Buttonr33" Click="Buttonr33_Click">
+                                    <Image  Source="pictures\rus\r33.jpg" Stretch="Fill"/>
+                                </Button>
+                            </WrapPanel>
+                        </Grid>
+                    </DockPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                        <Label Content="русский алфавит" VerticalAlignment="Bottom"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="текстовый режим">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="textbox4" Grid.Column="0" ToolTip="введите текст" TextChanged="textbox4_TextChanged"/>
+                    <TextBox x:Name="textbox5" Grid.Column="1" ToolTip="результат"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
